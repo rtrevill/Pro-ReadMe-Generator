@@ -46,13 +46,14 @@ function renderLicenseSection(license) {
 }
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown({gitName, license, badge, licSect, licenseLink}) {
+function generateMarkdown({gitName, email, projName, description, license, dependCom, testCom, infoRepo, contribRepo, badge, licSect, licenseLink}) {
 fs.writeFile("redMaa.md",
-  `# Title  
+  `# ${projName}  
   Welcome to my project  
 
   ${badge}
-  ## Description
+  ## Description  
+  ${description}   
   ## Table of Contents
 
   - [Installation](#installation)
@@ -62,16 +63,24 @@ fs.writeFile("redMaa.md",
   - [Tests](#tests)
   - [Questions](#questions)
 
-  ## Installation
-  ## Usage
+  ## Installation   
+  To install the necessary dependencies, run the following command   
+  >\`${dependCom}\`
+
+  ## Usage   
+  When using the repository: ${infoRepo}
   ## License  
   ${licSect}  
   For more information on this license, please click the link below:  
   ${licenseLink} 
 
-  ## Contributing
-  ## Tests
-  ## Questions
+  ## Contributing      
+  If you would like to contribute: ${contribRepo}     
+  ## Tests   
+  To run tests, please run the following:   
+  >\`${testCom}\`   
+  ## Questions   
+  If you have any questions, you can contact me directly at ${email}, or alternatively through [gitHub:](https://github.com/${gitName})
   
   `,
   (err) => {

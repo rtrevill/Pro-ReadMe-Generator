@@ -10,6 +10,21 @@ const questions = [{
     message: 'What is your Github username?'
 },
 {
+    type: 'input',
+    name: 'email',
+    message: 'What is your email address?'
+},
+{
+    type: 'input',
+    name: 'projName',
+    message: "What is your project's name?"
+},
+{
+    type: 'input',
+    name: 'description',
+    message: 'Please write a short description of your project'
+},
+{
     type: 'list',
     name: 'license',
     message: 'What kind of license should your portfolio have?',
@@ -20,6 +35,28 @@ const questions = [{
         'BSD 3',
         'None'
     ]
+},
+{
+    type: 'input',
+    name: 'dependCom',
+    message: 'What command should be run to run dependencies?',
+    default: 'npm i'
+},
+{
+    type: 'input',
+    name: 'testCom',
+    message: 'What command should be run to run tests?',
+    default: 'npm test'
+},
+{
+    type: 'input',
+    name: 'infoRepo',
+    message: 'What does the user need to know about using the repo?'
+},
+{
+    type: 'input',
+    name: 'contribRepo',
+    message: 'What does the user need to know about contributing to the repo?'
 }
 ];
 
