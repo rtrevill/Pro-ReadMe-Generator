@@ -1,7 +1,7 @@
 # Title  
   Welcome to my project  
 
-  ![Static Badge](https://img.shields.io/badge/license-GPL%203.0-blue)
+  ![Static Badge](https://img.shields.io/badge/license-MIT-blue)
   ## Description
   ## Table of Contents
 
@@ -14,7 +14,11 @@
 
   ## Installation
   ## Usage
-  ## License
+  ## License  
+  This project is licensed under the MIT license.  
+  For more information on this license, please click the link below:  
+  https://opensource.org/license/mit/ 
+
   ## Contributing
   ## Tests
   ## Questions

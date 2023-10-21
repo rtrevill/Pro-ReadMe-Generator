@@ -31,8 +31,12 @@ function init() {
     inquirer
         .prompt(questions)
         .then((answers) => {
-            const badge = generateMarkdown.renderLicenseBadge(answers.license)
-            answers.badge = badge
+            const badge = generateMarkdown.renderLicenseBadge(answers.license);
+            answers.badge = badge;
+            const licSect = generateMarkdown.renderLicenseSection(answers.license);
+            answers.licSect = licSect;
+            const licenseLink = generateMarkdown.renderLicenseLink(answers.license);
+            answers.licenseLink = licenseLink;
             console.log(answers);
             generateMarkdown.generateMarkdown(answers)
         })

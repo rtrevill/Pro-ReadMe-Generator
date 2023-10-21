@@ -16,14 +16,37 @@ function renderLicenseBadge(license) {
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+  let licLink = ""
+  if (license !== 'None'){
+    (license === 'MIT') ? licLink = "https://opensource.org/license/mit/" :
+    (license === 'Apache 2.0') ? licLink = "https://www.apache.org/licenses/LICENSE-2.0" :
+    (license === 'GPL 3.0') ? licLink = "https://www.gnu.org/licenses/gpl-3.0.en.html" :
+    licLink = "https://opensource.org/license/bsd-3-clause/";
+    return licLink;
+  }
+  else {
+    return licLink;
+  }
+
+}
 
 // TODO: Create a function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  let licenseText = "";
+  if (license !== 'None'){
+    licenseText = `This project is licensed under the ${license} license.`
+    return licenseText;
+  }
+  else {
+    return licenseText;
+  }
+
+}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown({gitName, license, badge}) {
+function generateMarkdown({gitName, license, badge, licSect, licenseLink}) {
 fs.writeFile("redMaa.md",
   `# Title  
   Welcome to my project  
@@ -41,7 +64,11 @@ fs.writeFile("redMaa.md",
 
   ## Installation
   ## Usage
-  ## License
+  ## License  
+  ${licSect}  
+  For more information on this license, please click the link below:  
+  ${licenseLink} 
+
   ## Contributing
   ## Tests
   ## Questions
@@ -54,6 +81,8 @@ fs.writeFile("redMaa.md",
 }
 
 module.exports ={ generateMarkdown,
-                  renderLicenseBadge
+                  renderLicenseBadge,
+                  renderLicenseSection,
+                  renderLicenseLink
 };
 // module.exports = renderLicenseBadge;
