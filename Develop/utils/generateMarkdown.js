@@ -1,7 +1,18 @@
 const fs = require('fs'); 
 // TODO: Create a function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+  let licBadge = "";
+  if (license !== 'None'){
+  const noGaps = license.replace(" ", "%20");
+  licBadge = `![Static Badge](https://img.shields.io/badge/license-${noGaps}-blue)`;
+  console.log(licBadge)
+  return licBadge;
+  }
+  else 
+  licBadge = "";
+  return licBadge;
+}
 
 // TODO: Create a function that returns the license link
 // If there is no license, return an empty string
@@ -12,11 +23,12 @@ function renderLicenseLink(license) {}
 function renderLicenseSection(license) {}
 
 // TODO: Create a function to generate markdown for README
-function generateMarkdown(data) {
+function generateMarkdown({gitName, license, badge}) {
 fs.writeFile("redMaa.md",
   `# Title  
   Welcome to my project  
 
+  ${badge}
   ## Description
   ## Table of Contents
 
@@ -41,4 +53,7 @@ fs.writeFile("redMaa.md",
   return `# ${data.title}`
 }
 
-module.exports = generateMarkdown;
+module.exports ={ generateMarkdown,
+                  renderLicenseBadge
+};
+// module.exports = renderLicenseBadge;

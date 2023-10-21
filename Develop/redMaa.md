@@ -1,6 +1,7 @@
 # Title  
   Welcome to my project  
 
+  ![Static Badge](https://img.shields.io/badge/license-GPL%203.0-blue)
   ## Description
   ## Table of Contents
 
