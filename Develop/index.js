@@ -1,9 +1,10 @@
-// TODO: Include packages needed for this application
+// Add required modules, and link for usage
 const fs = require('fs');
 const inquirer = require ('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown')
+const fileName = "README.md"
 
-// TODO: Create an array of questions for user input
+// Inquirer list of questions to be output to console.
 const questions = [{
     type: 'input',
     name: 'gitName',
@@ -60,7 +61,16 @@ const questions = [{
 }
 ];
 
-// TODO: Create a function to initialize app
+function writeToFile(name, data) {
+    fs.writeFile(name, data,
+        (err) => {
+          (err) ? console.log(`NoNo ${err}`) : console.log(`All Good`)});
+}
+
+
+// Function to initialise the app. 
+// Runs inquirer questions, then runs function on linked page to get licence information.
+// Then runs function to Render the README.md file. 
 function init() {
     inquirer
         .prompt(questions)
@@ -71,7 +81,8 @@ function init() {
             answers.licSect = licSect;
             const licenseLink = generateMarkdown.renderLicenseLink(answers.license);
             answers.licenseLink = licenseLink;
-            generateMarkdown.generateMarkdown(answers);
+            const pageWritten = generateMarkdown.generateMarkdown(answers);
+            writeToFile(fileName, pageWritten);
         })
         .catch((error) => {
             (error) ? console.log(`BAD!! ${error}`) : console.log("All Good")

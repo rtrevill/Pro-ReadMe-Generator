@@ -1,8 +1,8 @@
-# yy   
+# dd   
 
-  ![Static Badge](https://img.shields.io/badge/license-MIT-blue)
+  ![Static Badge](https://img.shields.io/badge/license-BSD%203-blue)
   ## Description  
-  jj   
+  fgdfg   
   ## Table of Contents
 
   - [Installation](#installation)
@@ -17,19 +17,18 @@
   `npm i`
 
   ## Usage   
-  When using the repository: jj
+  When using the repository: ggfgdf
   ## License  
-  This project is licensed under the MIT license.   
+  This project is licensed under the BSD 3 license.   
     For more information on this license, please click the link below:  
     
-  https://opensource.org/license/mit/ 
+  https://opensource.org/license/bsd-3-clause/ 
 
   ## Contributing      
-  If you would like to contribute: jj     
+  If you would like to contribute: gdfgf     
   ## Tests   
   To run tests, please run the following:   
   `npm test`   
   ## Questions   
-  If you have any questions, you can contact me directly at rr, or alternatively through [gitHub:](https://github.com/uu)
-  
+  If you have any questions, you can contact me directly at ff, or alternatively through [gitHub:](https://github.com/gg)
   
