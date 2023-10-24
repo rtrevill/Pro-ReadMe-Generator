@@ -4,6 +4,7 @@ const inquirer = require ('inquirer');
 const generateMarkdown = require('./utils/generateMarkdown')
 const fileName = "README.md"
 
+
 // Inquirer list of questions to be output to console.
 const questions = [{
     type: 'input',
@@ -13,7 +14,7 @@ const questions = [{
 {
     type: 'input',
     name: 'email',
-    message: 'What is your email address?'
+    message: 'What is your email address?',
 },
 {
     type: 'input',
@@ -28,7 +29,7 @@ const questions = [{
 {
     type: 'list',
     name: 'license',
-    message: 'What kind of license should your portfolio have?',
+    message: 'What kind of license should your project have?',
     choices: [
         'MIT',
         'Apache 2.0',
@@ -52,12 +53,12 @@ const questions = [{
 {
     type: 'input',
     name: 'infoRepo',
-    message: 'What does the user need to know about using the repo?'
+    message: 'What does the user need to know about using the project?'
 },
 {
     type: 'input',
     name: 'contribRepo',
-    message: 'What does the user need to know about contributing to the repo?'
+    message: 'What does the user need to know about contributing to the project?'
 }
 ];
 
