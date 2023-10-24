@@ -75,7 +75,7 @@ const finishedPage = `# ${projName}
   To run tests, please run the following:   
   \`${testCom}\`   
   ## Questions   
-  If you have any questions, you can contact me directly at ${email}, or alternatively through [gitHub:](https://github.com/${gitName})
+  If you have any questions, you can contact me directly at ${email}, or alternatively through gitHub [${gitName}:](https://github.com/${gitName})
   `
   return finishedPage;
 }
