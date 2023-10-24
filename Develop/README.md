@@ -1,8 +1,8 @@
-# dd   
+# e   
 
-  ![Static Badge](https://img.shields.io/badge/license-BSD%203-blue)
+  ![Static Badge](https://img.shields.io/badge/license-GPL%203.0-blue)
   ## Description  
-  fgdfg   
+  rtrerert   
   ## Table of Contents
 
   - [Installation](#installation)
@@ -17,18 +17,18 @@
   `npm i`
 
   ## Usage   
-  When using the repository: ggfgdf
+  When using the repository: gfdgdfgdf
   ## License  
-  This project is licensed under the BSD 3 license.   
+  This project is licensed under the GPL 3.0 license.   
     For more information on this license, please click the link below:  
     
-  https://opensource.org/license/bsd-3-clause/ 
+  https://www.gnu.org/licenses/gpl-3.0.en.html 
 
   ## Contributing      
-  If you would like to contribute: gdfgf     
+  If you would like to contribute: gfdgfdgfd     
   ## Tests   
   To run tests, please run the following:   
   `npm test`   
   ## Questions   
-  If you have any questions, you can contact me directly at ff, or alternatively through [gitHub:](https://github.com/gg)
+  If you have any questions, you can contact me directly at r, or alternatively through [gitHub:](https://github.com/t)
   

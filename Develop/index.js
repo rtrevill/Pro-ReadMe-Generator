@@ -61,10 +61,10 @@ const questions = [{
 }
 ];
 
+// Function to render README.md file in current directory
 function writeToFile(name, data) {
     fs.writeFile(name, data,
-        (err) => {
-          (err) ? console.log(`NoNo ${err}`) : console.log(`All Good`)});
+        (err) => (err) ? console.log(`NoNo ${err}`):'');
 }
 
 
