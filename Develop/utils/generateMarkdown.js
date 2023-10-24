@@ -1,21 +1,20 @@
+// Define required module to render page.
 const fs = require('fs'); 
-// TODO: Create a function that returns a license badge based on which license is passed in
-// If there is no license, return an empty string
+
+// Function to create and return a license badge from the nominated license.
 function renderLicenseBadge(license) {
   let licBadge = "";
   if (license !== 'None'){
-  const noGaps = license.replace(" ", "%20");
-  licBadge = `![Static Badge](https://img.shields.io/badge/license-${noGaps}-blue)`;
-  console.log(licBadge)
-  return licBadge;
+    const noGaps = license.replace(" ", "%20");
+    licBadge = `![Static Badge](https://img.shields.io/badge/license-${noGaps}-blue)`;
+    return licBadge;
   }
   else 
-  licBadge = "";
-  return licBadge;
+    licBadge = "";
+    return licBadge;
 }
 
-// TODO: Create a function that returns the license link
-// If there is no license, return an empty string
+// Function to assign a link for the nominated license
 function renderLicenseLink(license) {
   let licLink = ""
   if (license !== 'None'){
@@ -31,25 +30,25 @@ function renderLicenseLink(license) {
 
 }
 
-// TODO: Create a function that returns the license section of README
-// If there is no license, return an empty string
+// Function to return text in the license section.
 function renderLicenseSection(license) {
   let licenseText = "";
   if (license !== 'None'){
-    licenseText = `This project is licensed under the ${license} license.`
+    licenseText = `This project is licensed under the ${license} license.   
+    For more information on this license, please click the link below:`
     return licenseText;
   }
   else {
+    licenseText = 'No license has been nominated for this project'
     return licenseText;
   }
 
 }
 
-// TODO: Create a function to generate markdown for README
+// Function to create README.md page and then return completed page
 function generateMarkdown({gitName, email, projName, description, license, dependCom, testCom, infoRepo, contribRepo, badge, licSect, licenseLink}) {
-fs.writeFile("redMaa.md",
-  `# ${projName}  
-  Welcome to my project  
+// fs.writeFile("redMaa.md",
+const finishedPage = `# ${projName}   
 
   ${badge}
   ## Description  
@@ -65,28 +64,25 @@ fs.writeFile("redMaa.md",
 
   ## Installation   
   To install the necessary dependencies, run the following command   
-  >\`${dependCom}\`
+  \`${dependCom}\`
 
   ## Usage   
   When using the repository: ${infoRepo}
   ## License  
   ${licSect}  
-  For more information on this license, please click the link below:  
+    
   ${licenseLink} 
 
   ## Contributing      
   If you would like to contribute: ${contribRepo}     
   ## Tests   
   To run tests, please run the following:   
-  >\`${testCom}\`   
+  \`${testCom}\`   
   ## Questions   
   If you have any questions, you can contact me directly at ${email}, or alternatively through [gitHub:](https://github.com/${gitName})
-  
-  `,
-  (err) => {
-    (err) ? console.log(`NoNo ${err}`) : console.log(`All Good`)});
+  `
 
-  return `# ${data.title}`
+  return finishedPage;
 }
 
 module.exports ={ generateMarkdown,
@@ -94,4 +90,3 @@ module.exports ={ generateMarkdown,
                   renderLicenseSection,
                   renderLicenseLink
 };
-// module.exports = renderLicenseBadge;
