@@ -4,14 +4,13 @@ const fs = require('fs');
 function renderLicenseBadge(license) {
   let licBadge = "";
   if (license !== 'None'){
-  const noGaps = license.replace(" ", "%20");
-  licBadge = `![Static Badge](https://img.shields.io/badge/license-${noGaps}-blue)`;
-  console.log(licBadge)
-  return licBadge;
+    const noGaps = license.replace(" ", "%20");
+    licBadge = `![Static Badge](https://img.shields.io/badge/license-${noGaps}-blue)`;
+    return licBadge;
   }
   else 
-  licBadge = "";
-  return licBadge;
+    licBadge = "";
+    return licBadge;
 }
 
 // TODO: Create a function that returns the license link
@@ -48,8 +47,7 @@ function renderLicenseSection(license) {
 // TODO: Create a function to generate markdown for README
 function generateMarkdown({gitName, email, projName, description, license, dependCom, testCom, infoRepo, contribRepo, badge, licSect, licenseLink}) {
 fs.writeFile("redMaa.md",
-  `# ${projName}  
-  Welcome to my project  
+  `# ${projName}   
 
   ${badge}
   ## Description  
@@ -94,4 +92,3 @@ module.exports ={ generateMarkdown,
                   renderLicenseSection,
                   renderLicenseLink
 };
-// module.exports = renderLicenseBadge;

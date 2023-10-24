@@ -60,9 +60,6 @@ const questions = [{
 }
 ];
 
-// TODO: Create a function to write README file
-function writeToFile(fileName, data) {}
-
 // TODO: Create a function to initialize app
 function init() {
     inquirer
@@ -74,8 +71,7 @@ function init() {
             answers.licSect = licSect;
             const licenseLink = generateMarkdown.renderLicenseLink(answers.license);
             answers.licenseLink = licenseLink;
-            console.log(answers);
-            generateMarkdown.generateMarkdown(answers)
+            generateMarkdown.generateMarkdown(answers);
         })
         .catch((error) => {
             (error) ? console.log(`BAD!! ${error}`) : console.log("All Good")
