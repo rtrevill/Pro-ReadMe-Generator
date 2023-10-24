@@ -1,6 +1,3 @@
-// Define required module to render page.
-const fs = require('fs'); 
-
 // Function to create and return a license badge from the nominated license.
 function renderLicenseBadge(license) {
   let licBadge = "";
@@ -47,7 +44,6 @@ function renderLicenseSection(license) {
 
 // Function to create README.md page and then return completed page
 function generateMarkdown({gitName, email, projName, description, license, dependCom, testCom, infoRepo, contribRepo, badge, licSect, licenseLink}) {
-// fs.writeFile("redMaa.md",
 const finishedPage = `# ${projName}   
 
   ${badge}
@@ -81,10 +77,10 @@ const finishedPage = `# ${projName}
   ## Questions   
   If you have any questions, you can contact me directly at ${email}, or alternatively through [gitHub:](https://github.com/${gitName})
   `
-
   return finishedPage;
 }
 
+// Command to allow access of functions from other page.
 module.exports ={ generateMarkdown,
                   renderLicenseBadge,
                   renderLicenseSection,
