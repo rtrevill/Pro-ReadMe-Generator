@@ -1,9 +1,9 @@
 # Node.js Challenge: Professional README Generator
 
-### The URL of the GitHub repository: 
+### The URL of the GitHub repository: https://github.com/rtrevill/Pro-ReadMe-Generator
 
 
-### A link to walkthrough video: 
+### A link to walkthrough video: https://drive.google.com/file/d/1Tmq1KDC5r6eIyw94VbjXCQ3zvnPbFNn7/view
 
 When creating an open source project on GitHub, it’s important to have a high-quality README for the app. This should include what the app is for, how to use the app, how to install it, how to report issues, and how to make contributions—this last part increases the likelihood that other developers will contribute to the success of the project.
 
